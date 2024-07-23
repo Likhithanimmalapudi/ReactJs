@@ -1,5 +1,6 @@
 function CardUI(props) {
-    return (
+    return 
+        (
         <div class="card" style={{width:'350'}}>
             <img src = "image.png" width={300}
             style={{border:'10px solid #FF000',borderRadius:'50px'}}></img>
