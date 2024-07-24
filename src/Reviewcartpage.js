@@ -4,7 +4,6 @@ function Seven() {
     // const count = 0;
     const [reviews, setReviews] = useState([]);
     const [inputValue, setInputValue] = useState('');
-
     const [count, setCount] = useState(0);
     const [count1, setCount1] = useState(500);
         useEffect(() => {

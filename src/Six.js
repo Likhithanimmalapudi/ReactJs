@@ -33,7 +33,6 @@ class Six extends React.Component{
             <div>
                 <h2>This is class component{this.name} {this.count} {this.state.Number}</h2>
                 <button type="button" class="btn btn-primary" onClick = {this.funcEightBtnClk}>Button</button>
-
             </div>
         )
     }
