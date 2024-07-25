@@ -17,6 +17,5 @@ function Home() {
             }
         </div>
         </UserContext.Provider>
-    );
-}
+    );}
 export default Home;
