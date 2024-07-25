@@ -11,6 +11,7 @@ function Signup() {
         }
     return (
         <div>
+            <div>
             <button className="btn btn-dark" onClick={login1} style = {{width:'100px', marginLeft:'600px', marginTop:'30px'}}>Login</button>
             <button className="btn btn-dark" onClick={register1} style={{width:'100px', marginLeft:'60px', marginTop:'30px'}}>Register</button>
 
@@ -18,7 +19,7 @@ function Signup() {
             <Login/>
             :
             <Register/>
-}
+}</div>
         </div>
     );
 }

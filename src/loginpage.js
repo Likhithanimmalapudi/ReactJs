@@ -14,18 +14,25 @@
 //     );
 // }
 // export default Login;
-import { useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
+import { UserContext } from "./Home";
 const id = "22b01a4274";
 const pass = "Likki@2005"
 function Login() {
     const firstRef = useRef(null);
     const secondRef = useRef(null);
     const [textDisplay, display] = useState('');
+    const {isLogin, setIsLogin} =useContext(UserContext);
+
+    useEffect(() => {
+        firstRef.current.focus();
+    })
     const formSubmitted = (event) => {
         event.preventDefault();
         if(firstRef.current.value === id && secondRef.current.value === pass){
             console.log("Login successfull");
             display("Login successfull");
+            setIsLogin(true);
         }
         else{
             console.log("Login failed");
