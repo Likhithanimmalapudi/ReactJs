@@ -1,7 +1,7 @@
 import { useEffect , useState} from "react";
 import axios from "axios";
 function DataFetching2(){
-    const[data,setData] = useState([]);
+const[data,setData] = useState([]);
 useEffect(()=>{
     const fetchMyData = async () => {
         const res = await axios.get('https://fakestoreapi.com/users')
