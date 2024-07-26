@@ -28,5 +28,4 @@ function App1() {
         </cartContext.Provider>
     );
 }
-
 export default App1;

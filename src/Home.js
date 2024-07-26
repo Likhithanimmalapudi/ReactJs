@@ -16,6 +16,12 @@ function Home() {
                 : <Signup />
             }
         </div>
+<<<<<<< HEAD
     );
 }
 export default Home;
+=======
+        </UserContext.Provider>
+    );}
+export default Home;
+>>>>>>> de8e096fe52864902691a04fc5b00cabf93415ad
