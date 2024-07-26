@@ -14,12 +14,13 @@
 // import DataFetching2 from "./dataFetching2";
 import App1 from "./App";
 // import Home from "./Home";
+// import Profile from "./profile";
 // import Navigate from "./Navigation";
 // import UseApi from "./useapi";
 function One() {
     return (
         <div>
-            <App1 />
+            < App1/>
         </div>
     );
 }

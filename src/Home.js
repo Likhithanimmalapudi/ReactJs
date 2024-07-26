@@ -1,22 +1,21 @@
-import { createContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { createContext, useContext, useState } from "react";
 import Signup from "./signup";
 import Welcome from "./welcome";
+import { cartContext } from "./App";
 export const UserContext = createContext();
 function Home() {
-    const [isLogin, setIsLogin] = useState(false);
+    // const [isLogin, setIsLogin] = useState(false);
+    const {globalIsLogin, setGlobalIsLogin} = useContext(cartContext);
     return (
-        <UserContext.Provider value={{isLogin, setIsLogin}}>
         <div>
             {
-                isLogin ?
+                globalIsLogin ?
                 <div>
                     <Welcome/>
                 </div>
                 : <Signup />
             }
         </div>
-        </UserContext.Provider>
     );
 }
 export default Home;

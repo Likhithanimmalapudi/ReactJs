@@ -15,24 +15,26 @@
 // }
 // export default Login;
 import { useContext, useEffect, useRef, useState } from "react";
-import { UserContext } from "./Home";
-const id = "22b01a4274";
-const pass = "Likki@2005"
+import { cartContext } from "./App";
+// const id = "22b01a4274";
+// const pass = "Likki@2005"
 function Login() {
     const firstRef = useRef(null);
     const secondRef = useRef(null);
     const [textDisplay, display] = useState('');
-    const {isLogin, setIsLogin} =useContext(UserContext);
-
+    const {globalIsLogin, setGlobalIsLogin} = useContext(cartContext);
+    const {globalUser, setGlobalUser} = useContext(cartContext);
     useEffect(() => {
         firstRef.current.focus();
     })
     const formSubmitted = (event) => {
         event.preventDefault();
-        if(firstRef.current.value === id && secondRef.current.value === pass){
+        if(firstRef.current.value === globalUser.collegeIdValue && secondRef.current.value === globalUser.passwordValue){
             console.log("Login successfull");
             display("Login successfull");
-            setIsLogin(true);
+            setGlobalIsLogin(true);
+            localStorage.setItem("name","ReactJs");
+            localStorage.setItem("branch","YourBranch");
         }
         else{
             console.log("Login failed");

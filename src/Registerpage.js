@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import {cartContext} from './App';
 function Register() {
     const [collegeIdValue, SetCollegeId] = useState('');
     const [passwordValue, SetPassword] = useState('');
@@ -6,6 +7,7 @@ function Register() {
     const [branchValue, SetBranch] = useState('');
     const [yearValue, SetYear] = useState('');
     const [genderValue, SetGender] = useState('');
+    const {globalUser, setGlobalUser, globalIsLogin, setGlobalIsLogin} = useContext(cartContext);
     const [user, SetUser] = useState({});
 
     const getCollegeId = (event) => {
@@ -38,6 +40,8 @@ function Register() {
             collegeIdValue, passwordValue, emailValue, branchValue, yearValue, genderValue
         }
         SetUser(obj);
+        setGlobalUser(obj);
+        // setGlobalIsLogin(true);
         console.log(obj);
         console.log(user);
         console.log("Registration successfull")
